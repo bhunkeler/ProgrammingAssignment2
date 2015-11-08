@@ -75,7 +75,6 @@ cacheSolve <- function(mat, ...) {
   
   # if it is not cached, calculate it using solve() and cache the matrix,
   # then return it
-  inverse <- solve(mat$get())
   inverse <- solve(mat$get(), ...)
   mat$setInv(inverse)
   inverse
